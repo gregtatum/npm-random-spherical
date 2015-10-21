@@ -1,0 +1,24 @@
+{
+  "name": "random-spherical",
+  "version": "1.0.0",
+  "description": "Generate a random 3d point on a sphere",
+  "main": "random-spherical.js",
+  "scripts": {
+    "test": "browserify tests/*.js | node | faucet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TatumCreative/npm-random-spherical.git"
+  },
+  "author": "Greg Tatum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TatumCreative/npm-random-spherical/issues"
+  },
+  "homepage": "https://github.com/TatumCreative/npm-random-spherical#readme",
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "^4.2.1",
+    "test-fuzzy-array": "^1.0.1"
+  }
+}
