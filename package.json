@@ -15,6 +15,14 @@
   "bugs": {
     "url": "https://github.com/TatumCreative/npm-random-spherical/issues"
   },
+  "keywords": [
+    "random",
+    "prng",
+    "spherical",
+    "spherical coordinates",
+    "sphere",
+    "vector"
+  ],
   "homepage": "https://github.com/TatumCreative/npm-random-spherical#readme",
   "devDependencies": {
     "faucet": "0.0.1",

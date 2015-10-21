@@ -19,9 +19,9 @@ function _toArray( object ) {
 }
 
 var results = [
-	[  0.05449068, 0.1677050, 0.24270509 ],
-	[ -0.35267115,         0, -0.4854101 ],
-	[ -0.26450336, 0.8140576, -0.2781152 ],
+	[  0.18164, 0.55902,  0.80902 ],
+	[ -0.76942, 0.55902, -0.30902 ],
+	[        0,       0,       -1 ]
 ]
 
 Test("random spherical on an object", function(t) {
@@ -102,4 +102,31 @@ Test("random spherical on an object", function(t) {
 		
 	})
 	
+	t.test("calculates the correct radius", function(t) {
+		var random = RandomSphericalFn()
+		
+		t.plan(9)
+		
+		function vecLength(a) {
+			var x = a.x
+			var y = a.y
+			var z = a.z
+			return Math.sqrt(x*x + y*y + z*z)
+		}
+		
+		var epsilon = 0.0001
+		
+		t.assert( 1 - vecLength(random()) < epsilon )
+		t.assert( 1 - vecLength(random()) < epsilon )
+		t.assert( 1 - vecLength(random()) < epsilon )
+
+		t.assert( 2 - vecLength(random(2)) < epsilon )
+		t.assert( 2 - vecLength(random(2)) < epsilon )
+		t.assert( 2 - vecLength(random(2)) < epsilon )
+
+		t.assert( 3 - vecLength(random(3)) < epsilon )
+		t.assert( 3 - vecLength(random(3)) < epsilon )
+		t.assert( 3 - vecLength(random(3)) < epsilon )
+		
+	})
 })

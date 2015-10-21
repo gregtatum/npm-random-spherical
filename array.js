@@ -43,11 +43,10 @@ module.exports = function randomSphericalCoordinateFn( random ) {
 		
 		var theta  = random() * TAU
 		var phi    = random() * TAU
-		var r      = random() * radius
 		
-		target[0] = x + r * Math.sin( theta ) * Math.cos( phi )
-		target[1] = y + r * Math.sin( theta ) * Math.sin( phi )
-		target[2] = z + r * Math.cos( theta )
+		target[0] = x + radius * Math.sin( theta ) * Math.cos( phi )
+		target[1] = y + radius * Math.sin( theta ) * Math.sin( phi )
+		target[2] = z + radius * Math.cos( theta )
 		
 		return target
 	}
