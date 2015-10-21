@@ -6,8 +6,8 @@ Generate a random (x,y,z) point on a sphere. Internally it generates a random θ
 
 Works as an array or object. All parameters are optional. If no random number generator is provided then `Math.random` is used. If no constructor is provided for the object then it will create a bare `{}`.
 
-	var randomSphere = require('random-spherical/array')( randomGenerator )
-	var randomSphere = require('random-spherical/object')( randomGenerator, constructor )
+	var randomSpherical = require('random-spherical/array')( randomGenerator )
+	var randomSpherical = require('random-spherical/object')( randomGenerator, constructor )
 
 It can also be initialized this way, but includes more source code if used with browserify.
 
@@ -19,9 +19,11 @@ It can also be initialized this way, but includes more source code if used with 
 
 The `radius` is a number, `offset` is a 3d array/object vector, and the `target` is an optional array/object target to avoid garbage collection.
 
-	randomSphere()
-	randomSphere( radius, offset )
-	randomSphere( target, radius, offset )
+	var randomSpherical = require('random-spherical/array')()
+	
+	randomSpherical()
+	randomSpherical( radius, offset )
+	randomSpherical( target, radius, offset )
 
 # Usage
 
