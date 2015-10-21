@@ -1,6 +1,6 @@
 # Random Spherical
 
-Generate a random 3d point on a sphere. It generates a random θ and φ value in a (r,θ,φ) [spherical coordinate](https://en.wikipedia.org/wiki/Spherical_coordinate_system) and maps it to a (x,y,z) cartesian coordinate. Returns either an array, object with an optional constructor.
+Generate a random (x,y,z) point on a sphere. Internally it generates a random θ and φ value in a (r,θ,φ) [spherical coordinate](https://en.wikipedia.org/wiki/Spherical_coordinate_system) and maps it to a (x,y,z) cartesian coordinate. Returns either an array or an object with an optional constructor.
 
 # Example
 
@@ -29,7 +29,7 @@ It can also be initialized this way, but includes more source code if used with 
 
 # Interface
 
-The radius is a number, offset is a 3d position, and the target is an optional array or object target to avoid garbage collection.
+The `radius` is a number, `offset` is a 3d array/object vector, and the `target` is an optional array/object target to avoid garbage collection.
 
 	randomSphere()
 	randomSphere( radius, offset )
