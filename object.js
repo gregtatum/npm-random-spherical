@@ -11,56 +11,56 @@ var _getObject = {
 }
 
 function _returnArray( x, y, z, target ) {
-	
+
 	if( !target ) { target = [] }
-	
+
 	target[0] = x
 	target[1] = y
 	target[2] = z
-	
+
 	return target
 }
 
 function _returnConstructor( x, y, z, target, constructor ) {
-	
+
 	if( !target ) { target = new constructor }
-	
+
 	target.x = x
 	target.y = y
 	target.z = z
-	
+
 	return target
 }
 
 function _returnObject( x, y, z, target ) {
-	
+
 	if( !target ) { target = {} }
-	
+
 	target.x = x
 	target.y = y
 	target.z = z
-	
+
 	return target
 }
 
 module.exports = function randomSphericalCoordinateFn( random, constructor ) {
-	
+
 	if( !random ) { random = Math.random }
 	var TAU = Math.PI * 2
-	
+
 	return function( a, b, c ) {
 
 		var target, radius, offset
-		
+
 		if( typeof a === "object" ) {
 			target = a
 			radius = b
 			offset = c
 		} else {
 			radius = a
-			offset = b			
+			offset = b
 		}
-		
+
 		if( !target ) {	target = constructor ? new constructor() : {} }
 		if( radius === undefined ) { radius = 1 }
 
@@ -73,14 +73,15 @@ module.exports = function randomSphericalCoordinateFn( random, constructor ) {
 			var y = 0
 			var z = 0
 		}
-		
-		var theta  = random() * TAU
-		var phi    = random() * TAU
-		
-		target.x = x + radius * Math.sin( theta ) * Math.cos( phi )
-		target.y = y + radius * Math.sin( theta ) * Math.sin( phi )
-		target.z = z + radius * Math.cos( theta )
-		
+
+		var costheta = 2 * random() - 1
+		var sintheta = Math.sqrt( 1 - costheta * costheta )
+		var phi      = random() * TAU
+
+		target.x = x + radius * sintheta * Math.cos( phi )
+		target.y = y + radius * sintheta * Math.sin( phi )
+		target.z = z + radius * costheta
+
 		return target
 	}
 }
