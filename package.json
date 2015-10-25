@@ -4,7 +4,11 @@
   "description": "Generate a random 3d point on a sphere",
   "main": "index.js",
   "scripts": {
-    "test": "browserify tests/*.js | node | faucet"
+    "test": "browserify tests/*.js | node | faucet",
+    "build-example": "browserify example/draw-sphere.js -o example/bundle.js",
+    "gh-pages": "mkdir -p ./gh-pages && cp -a ./example/. ./gh-pages",
+    "build": "npm run build-example && npm run gh-pages",
+    "draw-sphere": "budo -d example example/draw-sphere.js:bundle.js --live --verbose | garnish"
   },
   "repository": {
     "type": "git",
@@ -25,7 +29,14 @@
   ],
   "homepage": "https://github.com/TatumCreative/npm-random-spherical#readme",
   "devDependencies": {
+    "@tatumcreative/color": "^1.1.2",
+    "budo": "^5.1.5",
     "faucet": "0.0.1",
+    "garnish": "^3.2.1",
+    "gl-mat4": "^1.1.4",
+    "gl-vec3": "^1.0.3",
+    "lerp": "^1.0.3",
+    "poem-loop": "^1.1.1",
     "tape": "^4.2.1",
     "test-fuzzy-array": "^1.0.1"
   }

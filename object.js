@@ -73,14 +73,16 @@ module.exports = function randomSphericalCoordinateFn( random, constructor ) {
 			var y = 0
 			var z = 0
 		}
+		
+		// http://mathworld.wolfram.com/SpherePointPicking.html
 
-		var costheta = 2 * random() - 1
-		var sintheta = Math.sqrt( 1 - costheta * costheta )
+		var cosTheta = 2 * random() - 1
+		var sinTheta = Math.sqrt( 1 - cosTheta * cosTheta )
 		var phi      = random() * TAU
 
-		target.x = x + radius * sintheta * Math.cos( phi )
-		target.y = y + radius * sintheta * Math.sin( phi )
-		target.z = z + radius * costheta
+		target.x = x + radius * sinTheta * Math.cos( phi )
+		target.y = y + radius * sinTheta * Math.sin( phi )
+		target.z = z + radius * cosTheta
 
 		return target
 	}

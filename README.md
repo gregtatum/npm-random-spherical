@@ -1,6 +1,14 @@
 # Random Spherical
 
-Generate a random (x,y,z) point on a sphere. Internally it generates a random θ and φ value in a (r,θ,φ) [spherical coordinate](https://en.wikipedia.org/wiki/Spherical_coordinate_system) and maps it to a (x,y,z) cartesian coordinate. Returns either an array or an object with an optional constructor.
+Generate a random uniformly distributed (x,y,z) [point on a sphere](http://mathworld.wolfram.com/SpherePointPicking.html). Returns either an array or an object with an optional constructor.
+
+# Live Example
+
+<a href='https://tatumcreative.github.io/random-spherical/'>
+	![Random sphere example](https://tatumcreative.github.io/random-spherical/screenshot.jpg)
+</a>
+
+[https://tatumcreative.github.io/random-spherical/](Spinning dots on a sphere)
 
 # Initializing
 
