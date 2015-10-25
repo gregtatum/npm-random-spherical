@@ -4,11 +4,11 @@ Generate a random uniformly distributed (x,y,z) [point on a sphere](http://mathw
 
 # Live Example
 
-<a href='https://tatumcreative.github.io/random-spherical/'>
-	![Random sphere example](https://tatumcreative.github.io/random-spherical/screenshot.jpg)
+<a href='https://tatumcreative.github.io/npm-random-spherical/'>
+	![Random sphere example](https://tatumcreative.github.io/npm-random-spherical/screenshot.jpg)
 </a>
 
-[https://tatumcreative.github.io/random-spherical/](Spinning dots on a sphere)
+[https://tatumcreative.github.io/npm-random-spherical/](Spinning dots on a sphere)
 
 # Initializing
 
