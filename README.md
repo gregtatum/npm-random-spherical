@@ -2,13 +2,31 @@
 
 Generate a random uniformly distributed (x,y,z) [point on a sphere](http://mathworld.wolfram.com/SpherePointPicking.html). Returns either an array or an object with an optional constructor.
 
+# Basic Usage
+
+### Array
+
+	var random = require('random-spherical/array')()
+	
+	random() // returns [  0.20921503109744416,  0.5193212554924722, -0.8285737772562065 ]
+	random() // returns [ -0.23002829130722735, -0.061082054576348306, -0.971265137749219 ]
+	random() // returns [  0.5578066492160378,   0.0729061655774499, -0.826762621984793 ]
+
+### Object
+
+	var random = require('random-spherical/object')()
+	
+	random() // returns { x: 0.20921503109744416, y: 0.5193212554924722, z: -0.8285737772562065 }
+	random() // returns { x: -0.23002829130722735, y: -0.061082054576348306, z: -0.971265137749219 }
+	random() // returns { x: 0.5578066492160378, y: 0.0729061655774499, z: -0.826762621984793 }
+
 # Live Example
 
 <a href='https://tatumcreative.github.io/npm-random-spherical/'>
 	![Random sphere example](https://tatumcreative.github.io/npm-random-spherical/screenshot.jpg)
 </a>
 
-[https://tatumcreative.github.io/npm-random-spherical/](Spinning dots on a sphere)
+[Spinning dots on a sphere](https://tatumcreative.github.io/npm-random-spherical/)
 
 # Initializing
 
@@ -33,17 +51,8 @@ The `radius` is a number, `offset` is a 3d array/object vector, and the `target`
 	randomSpherical( radius, offset )
 	randomSpherical( target, radius, offset )
 
-# Usage
 
-## Simple
-
-	var random = require('random-spherical/array')()
-	
-	random() // returns [ 0.20921503109744416, 0.5193212554924722, -0.8285737772562065 ]
-	random() // returns [ -0.23002829130722735, -0.061082054576348306, -0.971265137749219 ]
-	random() // returns [ 0.5578066492160378, 0.0729061655774499, -0.826762621984793 ]
-
-## Configured with a PRNG and three.js vectors
+# Usage configured with a PRNG and three.js vectors
 
 	var randomGenerator = SeededRandom("my-seed")
 	var randomSpherical = require('random-spherical/object')( randomGenerator, THREE.Vector3 )
