@@ -1,4 +1,5 @@
 # Random Spherical
+![build status](https://travis-ci.org/TatumCreative/npm-random-spherical.svg?branch=master)
 
 Generate a random uniformly distributed (x,y,z) [point on a sphere](http://mathworld.wolfram.com/SpherePointPicking.html). Returns either an array or an object with an optional constructor.
 
