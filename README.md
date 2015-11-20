@@ -1,5 +1,9 @@
 # Random Spherical
-![build status](https://travis-ci.org/TatumCreative/npm-random-spherical.svg?branch=master)
+
+[![build status][travis-image]][travis-url]
+[![stability][stability-image]][stability-url]
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][downloads-url]
 
 Generate a random uniformly distributed (x,y,z) [point on a sphere](http://mathworld.wolfram.com/SpherePointPicking.html). Returns either an array or an object with an optional constructor.
 
@@ -64,3 +68,12 @@ The `radius` is a number, `offset` is a 3d array/object vector, and the `target`
 	var pointOnSurface = randomSpherical( planetRadius, planetPosition )
 	var pointInsidePlanet = randomSpherical( randomGenerator(), planetPosition )
 	var directionalVector = randomSpherical()
+
+[stability-image]: https://img.shields.io/badge/stability-stable-brightgreen.svg?style=flat-square
+[stability-url]: https://nodejs.org/api/documentation.html#documentation_stability_index
+[npm-image]: https://img.shields.io/npm/v/random-spherical.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/random-spherical
+[travis-image]: https://img.shields.io/travis/TatumCreative/npm-random-spherical/master.svg?style=flat-square
+[travis-url]: http://travis-ci.org/TatumCreative/npm-random-spherical
+[downloads-image]: http://img.shields.io/npm/dm/random-spherical.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/random-spherical
