@@ -1,1 +1,3 @@
 gh-pages
+.travis.yml
+tests

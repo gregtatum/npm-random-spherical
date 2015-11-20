@@ -30,6 +30,7 @@
   "homepage": "https://github.com/TatumCreative/npm-random-spherical#readme",
   "devDependencies": {
     "@tatumcreative/color": "^1.1.2",
+    "browserify": "^12.0.1",
     "budo": "^5.1.5",
     "faucet": "0.0.1",
     "garnish": "^3.2.1",
