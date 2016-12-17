@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TatumCreative/npm-random-spherical.git"
+    "url": "git+https://github.com/gregtatum/npm-random-spherical.git"
   },
   "author": "Greg Tatum",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TatumCreative/npm-random-spherical/issues"
+    "url": "https://github.com/gregtatum/npm-random-spherical/issues"
   },
   "keywords": [
     "random",
@@ -27,7 +27,7 @@
     "sphere",
     "vector"
   ],
-  "homepage": "https://github.com/TatumCreative/npm-random-spherical#readme",
+  "homepage": "https://github.com/gregtatum/npm-random-spherical#readme",
   "devDependencies": {
     "@tatumcreative/color": "^1.1.2",
     "browserify": "^12.0.1",
